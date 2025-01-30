@@ -102,12 +102,12 @@ sb_object = model.sb_muti_model(
 
 #### Training
 
-Pretraining: Run the base training phase to initialize the model parameters.
+**Pretraining**: Run the base training phase to initialize the model parameters.
 ```python
 sb_object.run_base()
 ```
 
-Finetuning: Fine-tune the model to improve performance.
+**Finetuning**: Fine-tune the model to improve performance.
 ```python
 sb_object.finetuning()
 ```
@@ -130,3 +130,9 @@ fore_ft=sb_object.eval_fore(digit_1_scaled.double()[:128,:],sb_object.v_fore_cop
 back_ft=sb_object.eval_back(digit_9_scaled.double()[:128,:],sb_object.v_back_copy,eps_test=eps_test)
 ```
 
+### Result Visualization
+Forward Model result (backbone result on the left and finetuning result on the right):
+![Image text](result_picture/fore_model.png)
+
+Backward Model result (backbone result on the left and finetuning result on the right):
+![Image text](result_picture/back_model.png)
