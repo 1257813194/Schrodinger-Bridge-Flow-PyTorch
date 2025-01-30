@@ -13,7 +13,6 @@ import sb.networks
 import time
 import os
 from datetime import datetime
-import ot
 
 
 class sb_muti_model(object):
